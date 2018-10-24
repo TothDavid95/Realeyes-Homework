@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Currency history";
+}
+
+<h2>Currency history</h2>
+
+<div id="switches_container" class="container">
+    <select multiple id="switches" size="12">
+        <option value="EUR">EUR</option>
+    </select>
+    <input type="button" id="currencySubmit" value="Submit" />
+</div>
+
+<div id="chart_container">
+    <div id="chart"></div>
+</div>
+<div id="legend_container">
+    <div id="legend"></div>
+</div>
+
+
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/rickshaw")
+    @Scripts.Render("~/Scripts/Currency/currencyCharts.js")
+}

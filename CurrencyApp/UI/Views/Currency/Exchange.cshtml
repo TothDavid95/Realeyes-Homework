@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Currency Exchange";
+}
+
+<h2>Currency exchanger</h2>
+
+<div class="form-group" name="from">
+    <select id="currFrom" class="currList">
+        <option>EUR</option>
+    </select>
+
+    <input id="amountFrom" class="currFrom" type="text" value="1.0" data-value="1.0"/>
+</div>
+
+
+<div class="form-group" name="to">
+    <select id="currTo" class="currList">
+        <option>EUR</option>
+    </select>
+
+    <input id="amountTo" class="currTo" type="text" value="1.0" data-value="1.0"/>
+</div>
+
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/Scripts/Currency/exchange.js")
+}
